@@ -1,0 +1,1376 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Top_2048.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_2048.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_2048"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Top_2048
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\vga_display.v" into library work
+Parsing module <vga_display>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\vga_640x480.v" into library work
+Parsing module <vga_640x480>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\title.v" into library work
+Parsing module <title>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\number.v" into library work
+Parsing module <number>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" into library work
+Parsing module <move_event>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\keyboard.v" into library work
+Parsing module <keyboard>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\control.v" into library work
+Parsing module <control>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\clkdiv_100ms.v" into library work
+Parsing module <clkdiv_100ms>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\clkdiv.v" into library work
+Parsing module <clkdiv>.
+Analyzing Verilog file "C:\Users\Young\Desktop\Verilog Project\Game2048\Top_2048.v" into library work
+Parsing module <Top_2048>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top_2048>.
+
+Elaborating module <clkdiv>.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\clkdiv.v" Line 29: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <vga_640x480>.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\vga_640x480.v" Line 47: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\vga_640x480.v" Line 61: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <vga_display>.
+
+Elaborating module <control>.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\control.v" Line 49: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\control.v" Line 50: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\control.v" Line 53: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\control.v" Line 54: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <number>.
+
+Elaborating module <title>.
+
+Elaborating module <move_event>.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 149: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 162: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 177: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 193: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 202: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 218: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 226: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 239: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 247: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 262: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 265: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 279: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 286: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 307: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 320: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 328: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 343: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 350: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 378: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 409: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 433: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 467: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 485: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 519: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 536: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 567: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 584: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 617: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 620: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 652: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 668: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 707: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 738: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 746: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 779: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 795: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 847: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 906: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 944: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1006: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1038: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1100: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1131: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1190: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1221: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1282: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1285: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1345: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1375: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1442: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1501: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1509: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1570: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1600: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1673: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1748: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1794: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1872: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1912: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 1990: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2029: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2104: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2143: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2220: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2223: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2299: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2337: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2420: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2495: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2503: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2580: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2618: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2671: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2684: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2699: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2715: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2724: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2740: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2748: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2761: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2769: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2784: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2787: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2801: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2808: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2829: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2842: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2850: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2865: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2872: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2900: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2931: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2955: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 2989: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3007: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3041: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3058: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3089: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3106: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3139: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3142: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3174: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3190: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3229: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3260: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3268: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3301: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3317: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3369: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3428: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3466: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3528: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3560: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3622: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3653: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3712: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3743: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3804: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3807: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3867: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3897: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 3964: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4023: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4031: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4092: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4122: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4195: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4270: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4316: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4394: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4434: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4512: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4551: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4626: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4665: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4742: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4745: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4821: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4859: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 4942: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5017: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5025: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5102: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5140: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5193: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5206: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5221: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5237: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5246: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5262: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5270: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5283: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5291: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5306: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5309: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5323: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5330: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5351: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5364: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5372: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5387: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5394: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5422: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5453: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5477: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5511: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5529: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5563: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5580: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5611: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5628: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5661: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5664: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5696: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5712: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5751: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5782: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5790: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5823: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5839: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5891: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5950: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 5988: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6050: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6082: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6144: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6175: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6234: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6265: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6326: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6329: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6389: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6419: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6486: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6545: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6553: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6614: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6644: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6717: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6792: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6838: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6916: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 6956: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7034: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7073: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7148: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7187: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7264: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7267: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7343: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7381: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7464: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7539: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7547: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7624: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7662: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7715: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7728: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7743: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7759: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7768: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7784: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7792: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7805: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7813: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7828: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7831: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7845: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7852: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7873: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7886: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7894: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7909: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7916: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7944: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7975: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 7999: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8033: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8051: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8085: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8102: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8133: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8150: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8183: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8186: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8218: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8234: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8273: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8304: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8312: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8345: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8361: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8413: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8472: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8510: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8572: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8604: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8666: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8697: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8756: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8787: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8848: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8851: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8911: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 8941: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9008: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9067: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9075: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9136: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9166: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9239: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9314: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9360: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9438: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9478: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9556: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9595: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9670: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9709: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9786: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9789: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9865: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9903: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 9986: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 10061: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 10069: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 10146: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v" Line 10184: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <clkdiv_100ms>.
+
+Elaborating module <keyboard>.
+WARNING:HDLCompiler:634 - "C:\Users\Young\Desktop\Verilog Project\Game2048\Top_2048.v" Line 45: Net <info_win[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Young\Desktop\Verilog Project\Game2048\Top_2048.v" Line 46: Net <info_end[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top_2048>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\Top_2048.v".
+WARNING:Xst:653 - Signal <info_win> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <info_end> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <Top_2048> synthesized.
+
+Synthesizing Unit <clkdiv>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\clkdiv.v".
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count[1]_GND_2_o_add_1_OUT> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <clkdiv> synthesized.
+
+Synthesizing Unit <vga_640x480>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\vga_640x480.v".
+        h_pixel = 800
+        h_total = 521
+        hbp = 144
+        hfp = 784
+        vbp = 31
+        vfp = 511
+    Found 1-bit register for signal <vs_enable>.
+    Found 10-bit register for signal <vc>.
+    Found 10-bit register for signal <hc>.
+    Found 10-bit adder for signal <hc[9]_GND_3_o_add_2_OUT> created at line 47.
+    Found 10-bit adder for signal <vc[9]_GND_3_o_add_8_OUT> created at line 61.
+    Found 10-bit comparator lessequal for signal <hc[9]_GND_3_o_LessThan_13_o> created at line 67
+    Found 10-bit comparator lessequal for signal <vc[9]_GND_3_o_LessThan_14_o> created at line 75
+    Found 10-bit comparator greater for signal <GND_3_o_hc[9]_LessThan_15_o> created at line 83
+    Found 10-bit comparator greater for signal <hc[9]_PWR_3_o_LessThan_16_o> created at line 83
+    Found 10-bit comparator greater for signal <GND_3_o_vc[9]_LessThan_17_o> created at line 83
+    Found 10-bit comparator greater for signal <vc[9]_GND_3_o_LessThan_18_o> created at line 83
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga_640x480> synthesized.
+
+Synthesizing Unit <vga_display>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\vga_display.v".
+    Found 3-bit register for signal <vgaGreen>.
+    Found 1-bit register for signal <vgaBlue<2>>.
+    Found 1-bit register for signal <vgaBlue<1>>.
+    Found 1-bit register for signal <vgaBlue<0>>.
+    Found 3-bit register for signal <vgaRed>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <vga_display> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\control.v".
+        h_pixel = 800
+        h_total = 521
+        hbp = 144
+        hfp = 784
+        vbp = 31
+        vfp = 511
+    Found 8-bit register for signal <data>.
+    Found 5-bit subtractor for signal <GND_5_o_GND_5_o_sub_16_OUT> created at line 53.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_18_OUT> created at line 53.
+    Found 32-bit subtractor for signal <n0189> created at line 53.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_22_OUT> created at line 53.
+    Found 32-bit subtractor for signal <GND_5_o_GND_5_o_sub_24_OUT> created at line 53.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_27_OUT> created at line 54.
+    Found 2-bit adder for signal <n0178[1:0]> created at line 51.
+    Found 3-bit adder for signal <n0181[2:0]> created at line 51.
+    Found 2-bit adder for signal <n0184[1:0]> created at line 52.
+    Found 3-bit adder for signal <n0187[2:0]> created at line 52.
+    Found 32-bit adder for signal <n0191> created at line 53.
+    Found 32-bit adder for signal <n0103> created at line 53.
+    Found 13-bit adder for signal <n0202[12:0]> created at line 82.
+    Found 15-bit adder for signal <n0124> created at line 82.
+    Found 10-bit subtractor for signal <xpix> created at line 45.
+    Found 10-bit subtractor for signal <ypix> created at line 46.
+    Found 32-bit adder for signal <_n0215> created at line 54.
+    Found 32-bit adder for signal <n0104> created at line 54.
+    Found 32x13-bit multiplier for signal <n0112> created at line 53.
+    Found 10x7-bit multiplier for signal <x[9]_PWR_5_o_MuLt_18_OUT> created at line 53.
+    Found 10x7-bit multiplier for signal <y[9]_PWR_5_o_MuLt_22_OUT> created at line 53.
+    Found 32x7-bit multiplier for signal <n0120> created at line 53.
+    Found 127-bit shifter logical right for signal <n0125> created at line 82
+    Found 10-bit comparator greater for signal <GND_5_o_xpix[9]_LessThan_3_o> created at line 51
+    Found 10-bit comparator greater for signal <GND_5_o_xpix[9]_LessThan_4_o> created at line 51
+    Found 10-bit comparator greater for signal <GND_5_o_xpix[9]_LessThan_6_o> created at line 51
+    Found 10-bit comparator greater for signal <GND_5_o_ypix[9]_LessThan_8_o> created at line 52
+    Found 10-bit comparator greater for signal <GND_5_o_ypix[9]_LessThan_9_o> created at line 52
+    Found 10-bit comparator greater for signal <GND_5_o_ypix[9]_LessThan_11_o> created at line 52
+    Found 10-bit comparator greater for signal <GND_5_o_ypix[9]_LessThan_36_o> created at line 73
+    Found 10-bit comparator greater for signal <ypix[9]_GND_5_o_LessThan_37_o> created at line 73
+    Found 10-bit comparator lessequal for signal <n0034> created at line 75
+    Found 10-bit comparator lessequal for signal <n0036> created at line 75
+    Found 10-bit comparator lessequal for signal <n0040> created at line 75
+    Found 10-bit comparator lessequal for signal <n0044> created at line 75
+    Found 10-bit comparator greater for signal <GND_5_o_xpix[9]_LessThan_45_o> created at line 75
+    Found 10-bit comparator lessequal for signal <n0050> created at line 76
+    Found 10-bit comparator lessequal for signal <n0053> created at line 76
+    Found 10-bit comparator lessequal for signal <n0057> created at line 76
+    Found 10-bit comparator lessequal for signal <n0061> created at line 76
+    Found 10-bit comparator greater for signal <GND_5_o_ypix[9]_LessThan_53_o> created at line 76
+    Found 10-bit comparator greater for signal <GND_5_o_xpix[9]_LessThan_81_o> created at line 212
+    Found 10-bit comparator greater for signal <xpix[9]_GND_5_o_LessThan_82_o> created at line 212
+    Found 10-bit comparator greater for signal <ypix[9]_GND_5_o_LessThan_83_o> created at line 212
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred  21 Comparator(s).
+	inferred  15 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <control> synthesized.
+
+Synthesizing Unit <number>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\number.v".
+        data =
+53900'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111100000000000000000000000000000000000000000000000000000000011111111111111100000000000000000000000000000000000000000000000000000111111111111111111000000000000000000000000000000000000000000000000001111111111111111111110000000000000000000000000000000000000000000000001111111111100001111111000000000000000000000000000000000000000000000001111111110000000001111100000000000000000000000000000000000000000000000111111000000000000011110000000000000000000000000000000000000000000000011110000000000000001111000000000000000000000000000000000000
+0000000000001000000000000000011111000000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000111111000000000000000000000000000000000000000000000000000000000000000111111000000000000000000000000000000000000000000000000000000000000000011111000000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000000000001111110000000000000000000
+0000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000000000000111111111111111110000000000000000000000000000000000000000000000000000111111111111111111000000000000000000000000000000000000000000000000000011111111111111111100000000000000000000000000000000000000000000000000000111111111111111110000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000011111000000000000000000000000000000000000000000000000000000000000000011111000000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000000000000111110000000111100000000000000000000000000000000000000000000000000000011111000000011110000000000000000000000000000000000000000000000000000011111000000001111000000000000000000000000000000000000000000000000000001111100000000111100000000000000000000000000000000000000000000000000001111100000000011110000000000000000000000000000000000000000000000000
+0001111100000000011110000000000000000000000000000000000000000000000000000111110000000001111000000000000000000000000000000000000000000000000000111110000000001111100000000000000000000000000000000000000000000000000011111000000000111110000000000000000000000000000000000000000000000000001111100000000011111000000000000000000000000000000000000000000000000001111100000000001111100000000000000000000000000000000000000000000000000111110000000000111110000000000000000000000000000000000000000000000000011111000000000011111000000000000000000000000000000000000000000000000001111100000000001111100000000000000000000000000000000000000000000000000111111111111111111111111110000000000000000000000000000000000000000000011111111111111111111111111000000000000000000000000000000000000000000001111111111111111111111111100000000000000000000000000000000000000000000111111111111111111111111100000000000000000000000000000000000000000000000001111111111111111000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000
+0000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000001111111111111000000000000000
+0000000000000000000000000000000000000000111111111111111110000000000000000000000000000000000000000000000000000111111111111111111110000000000000000000000000000000000000000000000000011111111101111111111000000000000000000000000000000000000000000000000011111100000000011111100000000000000000000000000000000000000000000000001111100000000000011100000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000001111000000000000000110000000000000000000000000000000000000000000000000111110000000000011111000000000000000000000000000000000000000000000000011111100000001111111110000000000000000000000000000000000000000000000001111111000011111111111000000000000000000000000000000000000000000000000011111110111111111110000000000000000000000000000000000000000000000000000111111111111111000000000000000000000000000000000000000000000000000000001111111111110000000000000000000000000000000000000000000000000000000000011
+1111111100000000000000000000000000000000000000000000000000000000000111111111111100000000000000000000000000000000000000000000000000000000111111111111111000000000000000000000000000000000000000000000000000000111111100111111110000000000000000000000000000000000000000000000000000011111100000111111100000000000000000000000000000000000000000000000000011111100000001111110000000000000000000000000000000000000000000000000001111100000000001111100000000000000000000000000000000000000000000000000111110000000000111110000000000000000000000000000000000000000000000000011110000000000001111000000000000000000000000000000000000000000000000001111000000000001111100000000000000000000000000000000000000000000000000111110000000000111110000000000000000000000000000000000000000000000000011111100000000111111000000000000000000000000000000000000000000000000000111111110001111111000000000000000000000000000000000000000000000000000011111111111111111100000000000000000000000000000000000000000000000000000011111111111111100000000000000000000000000000000
+0000000000000000000000001111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000000000111111111111000000000000000000000000000000000000000000000000000000001111111111111000000000
+0000000000000000000000000000000000000000000000111110001111110000000000000000000000000000000000000000000000000000000111100000000110000000000000000000000000000000000000000000000000000000111000000000000000000000000000000000000000000000000001100000000000000111000000000000000000000000000000000000000000000000001110000000000000111100000000000000000000000000000000000000000000000011111000000000000111100000000000000000000000000000000000000000000000111111100000000000011100000000000000000000000000000000000000000000001111111110000000000011110000000000000000000000000000000000000000000011111111110000000000011111000000000000000000000000000000000000000000001111001111000000000001111000000000000000000000000000000000000000000000111000111100000000000111100001111111100000000000000000000000000000000000000011110000000000111110011111111111000000000000000000000000000000000000001111000000000011110011111111111110000000000000000000000000000000000000111100000000001111011110001111111000000000000000000000000000000000000011110000000000111111
+1000000011111100000000000000000000000000000000000111110000000001111111000000000111110000000000000000000000000000000000011111000000000111111000000000011111000000000000000000000000000000000001111000000000011111100000000000111100000000000000000000000000000000000111100000000001111100000000000011110000000000000000000000000000000000011110000000000111110000000000001111000000000000000000000000000000000001111000000000001111100000000000111000000000000000000000000000000000000111100000000000111110000000000011100000000000000000000000000000000000011110000000000011111100000000011100000000000000000000000000000000000001111000000000000111110000000011110000000000000000000000000000000000001111100000000000011111110000011110000000000000000000000000000000001111111111111100000000111111111111110000000000000000000000000000000011111111111111100000000001111111111110000000000000000000000000000000001111111111111100000000000011111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111000000000000000000111110000000000000000000000000000000000000001111111111000000000000011111111110000000000000000000000000000000000011111111111110000000001111111111111110000000000000000000000000000000011110000111111100000001111111111111111000000000000000000000000000000001100000001111110000001111000000111111110000000000000000000000
+0000000000000000000111110000001100000000001111110000000000000000000000000000000000000000011111000000000000000000111111000000000000000000000000000000000000000001111100000000000000000001111100000000000000000000000000000000000000000111100000000000000000000111110000000000000000000000000000000000000000111110000000000000000000011111000000000000000000000000000000000000000011110000000000000000000001111000000000000000000000000000000000000000111110000000000000000000000111100000000000000000000000000000000000001111100000000000000000000000111100000000000000000000000000000000001111111000000000000000000000000111100000000000000000000000000000000001111111111100000000000000000000011100000000000000000000000000000000001111111111111000000000000000000011100000000000000000000000000000000000111111111111110000000000000000011100000000000000000000000000000000000000000001111111100000000000000111100000000000000000000000000000000000000000000001111110000000000000111100000000000000000000000000000000000000000000000011111000000000011111100000
+0000000000000000000000000000000000000000000001111000000011111110000000000000000000000000000000000000000000000000000111100000011111111111111111110000000000000000000000000000000000000000011110000011111111111111111111000000000000000000000000000000000000000001111000011111111111111111111000000000000000000000000000000000000000000111000000000111111111111111000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000001111000000111100000000000000000000000000000000000000000000000000000001111111111111100000000000000000000000000000000000000000000000000000001111111111111000000000000000000000000000000000000000000000000000000000111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111100000000000000000000000000000000000000000000000000000000000001111111111110000000000000000000000000000000000000000000000000000000011111111111110000000000000000000000000000000000000000000000000000000111111001111110000000000000000000000000000000000000000000000000000000111100000000110000000000000000000000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000000000000000000111000000000000000000000000000000000000100000000000000000000000000000111100000000000000000000000000000000000110000000000000000000000000000111100000000000000000000000000000000000111000000000000000000000000000111100000000000000000000000000000000001111100000000000000000000000000011110000000000000000000000000000000001111110000000000000000000000000011110000000000000000000000000000000001111111000000000000000000000000001111
+0000000000000000000000000000000011111111000000000000000000000000011111000011111111000000000000000000011111111100000000000000000000000001111000111111111110000000000000000011111111110000000000000000000000000111100111111111111100000000000000011111011110000000000000000000000000011110111100011111110000000000000011111001111000000000000000000000000011111111000000111111000000000000011110000111100000000000000000000000001111111000000001111110000000000011110000011110000000000000000000000000111111000000000011111000000000011110000001111000000000000000000000000011111100000000001111100000000011110000000111100000000000000000000000001111100000000000011110000000011110000000111110000000000000000000000000111110000000000001110000000011110000000011111000000000000000000000000011111100000000000111000000011110000000001111100000000000000000000000000111110000000000111100000011111110000000111100000000000000000000000000011111000000000011100000011111111111111111110000000000000000000000000001111110000000011110000111111111111111111111111111
+0000000000000000000000111111000000111100000111111111111111111111111110000000000000000000000001111111111111100000000000000011111111111111110000000000000000000000000011111111111100000000000000000000000011111110000000000000000000000000000111111111000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000000000001111111111000000000000000000000000000000000000000000000000000000000001110001111100000000000000000000000000000000000000000000000000000000001110000011111000000000000000000000000000010000000000000000000000000000111000000111100000000000000000000000000111000000000001111111100000000011100000011110000000000000000000000001111100000000011111111111000000001111000001110000000000000000000000011111110000000011111111111110000000111110000111000000000000000000000111111111000000011100000111111000000011111100111000000000000000000000011110111000000000000000001111100000000111111111000000000000000000000001100011100000000
+0000000000111100000000011111110000000000000000000000000000011100000000000000000011110000000011111111000000000000000000000000000001110000000000000000001111000000011111111111000000000000000000000000001111000000000000000000111000000011110001111100000000000000000000000000111100000000000000000111100000011110000011111000000000000000000000000011110000000000000000011100000001110000000111100000000000000000000000001111000000000000000011100000001111000000011110000000000000000000000000111100000000000000111100000000111100000000111000000000000000000000000011100000000000000111100000000011110000000011100000000000000000000000001110000000000001111100000000001111100000011110000000000000000000000000111000000000111111000000000000111111000001110000000000000000000000111111111110000111111111111111000001111111111110000000000000000000000111111111111000111111111111111100000011111111110000000000000000000000011111111111000011111111111111100000000111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111110000000000000000000000000000000000000000000000000000000000000111111111100000000000000000000000000000000000000000000000000000000001111111111100000000000000000000000000000000000000000000000000000000001110000001100000000000000000000000000000000000000000000000000000000001110000000000000000000000000000000111111000000000000000000000000000001110000000000000000000000000000011111111111000000000111111111111000001110000000000000000000000000000011111111111100000000111111111111000001111000000000000000000000000000011100000111111000000111111111111000000111000000000000000000000000000001100000001111100000011100000000000000111100000000000000000000000000000000000000011110000001110000000000000011110011111110000000000000000000000000000001111000000111000000000000001110011111111100000000000000000000000000000111100000011100000000000001111111111111111000000000000000000000000000011100000011110000
+0000000001111110000011111000000000000000000000000000111100000011111111000000000111110000000111100000000000000000000000000111100000001111111111000000011111000000011110000000000000000000000000011100000000111111111110000001111000000000111000000000000000000000000011100000000000000111111100000111100000000011100000000000000000000000111100000000000000000111110000011111000000001110000000000000000000001111100000000000000000001111000001111100000001110000000000000000000011111000000000000000000000011100000011111000000111000000000000000000111111111111111000000000000001110000001111110001111000000000000000000111111111111111100000000000000111000000011111111111000000000000000000111111111111111100000000000000011100000000111111110000000000000000000000000000000000000000000000000011100000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000111110111110000000000000000000000000000000000000000000000000000000000111111111100000000000000000000000000000000000000000000
+0000000000000001111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000
+0000000000000001111111111000000011100000000011111111000000000000000000000000000000001111111111000000011110000000011111111110000000000000000000000000000001111111111100000111111000000011110111111100000000000000000000000000000111000000000001111111100000001100000111110000000000000000000000000000011100000000000111011110000000000000001111000000000000000000000000000001110000000000011001111000000000000000111100000000000000000000000000001110000000000000000111000000000000000011110000000000000000000000000000111000000000000000011100000000000000001111000000000000000000000000000011111100000000000001110000000000000000111000000000000000000000000000001111111100000000000111000000000000000111000000000000000000000000000000111111111000000000011100000000000000011100000000000000000000000000000011111111110000000001110000000000000011100000000000000000000000000000000000011111000000000111000000000000011100000000000000000000000000000000000000011110000000111100000000000111100000000000000000000000000000000000000001111000000011110000000000
+1111000000000000000000000000000000000000000000111000000011110000000111111000000000000000000000000000000000000000000011100001111111111000111111111111110000000000000000000000000000000000001100001111111111100111111111111111000000000000000000000000000000000000110000111111111100011111111111111000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000000000001100000111000000000000000000000000000000000000000000000000000000000001111111111000000000000000000000000000000000000000000000000000000000001111111111000000000000000000000000000000000000000000000000000000000000011111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000110000000000000000000000001100000000000111000000000000011111100000000011111100000000000000000001110000000000111100000000000111111111100000001111111000000000000000001111000000000111110000000001111111111111000000011111110000000000000000111100000000111111000
+0000011111100011111100000000011111000000000000001111100000001111111000000001111000000011110000000000111110000000000001111110000001111111100000001111000000000111100000000001111000000000001111111000000111101110000000111100000000011110000000000011100000000000111111100000001100111000000011100000000000111000000000001110000000000111111110000000000011100000001110000000000011100000000001111000000000111101111000000000001110000000111000000000001110000000000111100000000111100111100000000000111000000011100000000001111000000000111100000000111100011110000000000011100000001111000000000111100000000111110000000011110001111000000000001110000000111100000000011100000000011110000000011111111111111000000001111000000001111000000011110000000011110000000011111111111111100000000111100000000111110000111110000000111110000000000000000001111000000000011110000000001111111111111000000111110000000000000000000111100000000001111000000000011111111111000000111111111111000000000000011110000000000111100000000000011111110000000111111111111100000000
+0000011110000000000000000000000000000000000000000111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000001100000000000111111000000011111100000000000000111111100000000000000001110000000001111111110000001111111100000000000111111111100000000000000111000000001111111111100000001111111000000001111111111111000000000000111100000000111100011110000000000111110000000111110000111110000000000111110000000011100000111100000000001111000000111100000001111100000000111111000000001110000011110000000000011100000011110000000011110000000111111100000000111000001111000000000001111000011110
+0000000001110000000111111100000000111100011110000000000001111000011110000000000111000000111101110000000011111111111000000000000111000001110000000000011100000111100111000000000111111111000000000000111100000111000000000001110000111100011100000000011111111110000000000111110000011110000000000111000011110001110000000011110001111000000000011110000001111000000000111100011111111111111000001110000011110000000011110000000011110000000011110011111111111111100001111000001111000000011110000000001111100000011110001111111111111110000111100000111100000011110000000000011111000111111000000000000111000000011110000011110000111110111111000001111111111111000000000000011100000000111100011110000111111111111100000001111111111000000000000001110000000011111111111000111111111111110000000001111100000000000000000111000000000111111111000000000000000001000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    Found 1-bit register for signal <douta>.
+    Found 16-bit subtractor for signal <GND_9_o_GND_9_o_sub_2_OUT<15:0>> created at line 802.
+    Found 53900x1-bit Read Only RAM for signal <GND_9_o_X_6_o_Mux_2_o>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+Unit <number> synthesized.
+
+Synthesizing Unit <title>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\title.v".
+        data =
+38400'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000001110000000111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000001110000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000001111110000000000000000000000000011000000000011110000000011110
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111110000000000000000111111111110000000000000000000000111100000000001111000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111110000000000000011111111111110000000000000000000011111000000000011111000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111001111111110000000000001111001111111100000000000000000001111110000000000111111000000111000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100000000111111100000000001110000001111110000000000000000001111111000000000001111110000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000111111000000000111000000001111110000000000000000111111110000000000001111110011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000011110000000001111100000000000000011111111000000000000011111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111000000001110000000000111110000000000000011111111100000000000000111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000111100000000001111100000000000001111101111000000000000001111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000001110000000000011111000000000000111110011110000000000001111011111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000001111100000001111000000000001111100000000000111100001111000000000001111000111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000011110000000000011111000000000011110000011110000000000111100000111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000111100000000000111100000000001111000001111100000000011110000000111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000011111000
+0000000011110000000001111000000111110000000001111000000001111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000001111100000000000111100000000111100000001111100000000111100000000001111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000011111000000000001110000000011110000000011110000000001111000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000111110000000000111100000001111000000000111100000000011110000000000011110
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000011111000000000011100000001111000000000011110000000001111100000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100000000000000111111000000001110000001111111111111111111100000000011111000000000011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000001111111000000111100000111111111111111111111111110000111111000000001111000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111111000000000000000011111110000111100000011111111111111111111111111000011111111000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111111000000111111111111110000000000000111111111111111111100000011111111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111100000000111111111111000000000000000000000000111111110000000011111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111100000000001111111110000000000000000000000000011111000000000000111111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000111100000000000000000000000000000111100000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111100000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000011000000000000000000000000000000000111110000000000000000000000000000000000000000
+0000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111000000000000000000111000000000000000000000000000000000000000000011100000000000000000000000000000011111111110000000000000000000000000000000000000000000001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111100000000000000000001110000000000000000000000000000000000000000000111000000000000000000000000000011111111111100000000000000000000000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110011100000111000000000000000000111000000000000000000000000000000000001110000001100000000000000000000000000001111000000111000000000000000000000000000000000000000000000111100000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110001110000001100000000000000000011000000000000000000000000000000000000111000001110000000000000000000000000000111000000011000000000000000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000011100000000000000000000000000010000000000000000000000000000000000001100000011100000000000000000000000000011100000000000000000000000000000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000111000000000011100011111000011100000011111000111000000111000000001111111111111001111100000011110000000001111000000000000000001111111000111001111100111100000011111000110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000111000011100000000011111011111100011110000111111110111110000111100000001111111111011101111110000011111100000000111000000000000000001111111000111101111110111110000011111100011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000111111111000111111111111001111100001100111111011100001110000000000111000000111111111100001111111000000001110000000000000000111001110011111011111111111100001111111000110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100001111111100011011111001110011111000110000111110111000011100000000001110000001111100111000111001100000000011100001111111100011100011100111111100111110111000011001110001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000111111110000000111100011100101
+1100111000011100011100001110000000000111000000111100011100011001110000000001110001111111110011100001110000111110011110011100011001110001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100000000000011100001100000111001110000111000111000111100000000001110000001110000110001110111000000000011100011000111000111000011100001111000111000111000110111000011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000000000001111000111000001110011000001110001110001110000000000011100000111100011100011111100000000000111000000001110011100001111000011100011110001110011111100000111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000000000011100001110000011001110000011000011100111100000000000111000001110000111000111100
+0000000000011100000000111001110001111000001110001110000111001111100000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000000000001110000111011001100111100011100001110011110000000000011000000111000011101111100001100000000111100000001110011100011110110011100011100011101111100001100010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110111100000001110011100001111100111001111000110000011111111100000000001111011001110000111110111000110000000001111100000111100111011111101100111000111000111011111100111001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111000111000011111001110001111111000000111111111000000000011111100011100001111101111111100000000001111111111111001111111111110001110001110001111101111
+1111001111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111111000011100001111000111000111111000000011111011000000000000111110001110000111100111111100000000000011111111111100111110011110000110000111000111110011111100011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111100000110000001000001110000111100000000011001110000000000001110000011000000100000011100000000000000011111100110000111000011000001000001100000110000011100000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100000000000000000000011100000000000000000000000000000000000000000000000000000000000011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000000000000000000001110000000000000000000000000000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011100000000000000000000011000000000000000000000000000000000000000000000000000000110000011100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000000001110000000000000000000000000000000000000000000000000000011100001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000111000000000000000000000111000000000000000000000000000000000000000000000000000001111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000000000000000000011100000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000000000000000000001110000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011011100
+0000000000000111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111111100000000000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100000000000000000111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    Found 1-bit register for signal <douta>.
+    Found 16-bit subtractor for signal <GND_10_o_GND_10_o_sub_2_OUT<15:0>> created at line 152.
+    Found 38400x1-bit Read Only RAM for signal <GND_10_o_X_7_o_Mux_2_o>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+Unit <title> synthesized.
+
+Synthesizing Unit <move_event>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\move_event.v".
+        test_map = 64'b0000000100100011010001010110011110001001101010110000000000000000
+        init_map = 64'b0001000000000000000000000000000000000000000000000000000000000000
+    Found 1-bit register for signal <up>.
+    Found 1-bit register for signal <left>.
+    Found 1-bit register for signal <down>.
+    Found 1-bit register for signal <right>.
+    Found 1-bit register for signal <win>.
+    Found 1-bit register for signal <isEnd>.
+    Found 64-bit register for signal <map>.
+    Found 1-bit register for signal <clr>.
+    Found 4-bit adder for signal <map[3]_GND_11_o_add_13416_OUT> created at line 7743.
+    Found 4-bit adder for signal <map[7]_GND_11_o_add_13448_OUT> created at line 7831.
+    Found 4-bit adder for signal <map[15]_GND_11_o_add_13476_OUT> created at line 7886.
+    Found 4-bit adder for signal <map[11]_GND_11_o_add_13488_OUT> created at line 7909.
+    Found 4-bit adder for signal <map[19]_GND_11_o_add_13620_OUT> created at line 7999.
+    Found 4-bit adder for signal <map[23]_GND_11_o_add_13938_OUT> created at line 8186.
+    Found 4-bit adder for signal <map[31]_GND_11_o_add_14148_OUT> created at line 8304.
+    Found 4-bit adder for signal <map[27]_GND_11_o_add_14212_OUT> created at line 8345.
+    Found 4-bit adder for signal <map[35]_GND_11_o_add_14500_OUT> created at line 8510.
+    Found 4-bit adder for signal <map[39]_GND_11_o_add_15104_OUT> created at line 8851.
+    Found 4-bit adder for signal <map[47]_GND_11_o_add_15496_OUT> created at line 9067.
+    Found 4-bit adder for signal <map[43]_GND_11_o_add_15612_OUT> created at line 9136.
+    Found 4-bit adder for signal <map[51]_GND_11_o_add_16056_OUT> created at line 9360.
+    Found 4-bit adder for signal <map[55]_GND_11_o_add_16946_OUT> created at line 9789.
+    Found 4-bit adder for signal <map[63]_GND_11_o_add_17520_OUT> created at line 10061.
+    Found 4-bit adder for signal <map[59]_GND_11_o_add_17688_OUT> created at line 10146.
+    Found 4-bit comparator equal for signal <map[15]_map[63]_equal_33_o> created at line 147
+    Found 4-bit comparator equal for signal <map[11]_map[59]_equal_159_o> created at line 376
+    Found 4-bit comparator equal for signal <n0487> created at line 670
+    Found 4-bit comparator equal for signal <n0490> created at line 670
+    Found 4-bit comparator equal for signal <n0493> created at line 670
+    Found 4-bit comparator equal for signal <map[7]_map[55]_equal_961_o> created at line 845
+    Found 4-bit comparator equal for signal <n0879> created at line 1386
+    Found 4-bit comparator equal for signal <n0882> created at line 1386
+    Found 4-bit comparator equal for signal <n0885> created at line 1386
+    Found 4-bit comparator equal for signal <map[3]_map[51]_equal_2439_o> created at line 1671
+    Found 4-bit comparator equal for signal <n1272> created at line 2356
+    Found 4-bit comparator equal for signal <n1275> created at line 2356
+    Found 4-bit comparator equal for signal <n1278> created at line 2356
+    Found 4-bit comparator equal for signal <map[3]_map[15]_equal_4490_o> created at line 2669
+    Found 4-bit comparator equal for signal <map[19]_map[31]_equal_4616_o> created at line 2898
+    Found 4-bit comparator equal for signal <map[35]_map[47]_equal_5418_o> created at line 3367
+    Found 4-bit comparator equal for signal <map[51]_map[63]_equal_6896_o> created at line 4193
+    Found 4-bit comparator equal for signal <n2769> created at line 4862
+    Found 4-bit comparator equal for signal <n2772> created at line 4862
+    Found 4-bit comparator equal for signal <n2775> created at line 4862
+    Found 4-bit comparator equal for signal <n2797> created at line 4870
+    Found 4-bit comparator equal for signal <n2800> created at line 4870
+    Found 4-bit comparator equal for signal <n2803> created at line 4870
+    Found 4-bit comparator equal for signal <n2826> created at line 4878
+    Found 4-bit comparator equal for signal <n2829> created at line 4878
+    Found 4-bit comparator equal for signal <n2832> created at line 4878
+    Found 4-bit comparator equal for signal <map[47]_map[15]_equal_67_o> created at line 5204
+    Found 4-bit comparator equal for signal <map[31]_map[63]_equal_8981_o> created at line 5281
+    Found 4-bit comparator equal for signal <map[43]_map[11]_equal_479_o> created at line 5451
+    Found 4-bit comparator equal for signal <map[27]_map[59]_equal_9393_o> created at line 5609
+    Found 4-bit comparator equal for signal <map[39]_map[7]_equal_1567_o> created at line 5948
+    Found 4-bit comparator equal for signal <map[23]_map[55]_equal_10481_o> created at line 6232
+    Found 4-bit comparator equal for signal <map[35]_map[3]_equal_3331_o> created at line 6790
+    Found 4-bit comparator equal for signal <map[19]_map[3]_equal_3573_o> created at line 6836
+    Found 4-bit comparator equal for signal <map[35]_map[19]_equal_11761_o> created at line 6914
+    Found 4-bit comparator equal for signal <map[19]_map[51]_equal_12245_o> created at line 7146
+    Found 4-bit comparator equal for signal <map[35]_map[51]_equal_12487_o> created at line 7537
+    Found 4-bit comparator equal for signal <map[11]_map[3]_equal_4524_o> created at line 7726
+    Found 4-bit comparator equal for signal <map[7]_map[15]_equal_13438_o> created at line 7803
+    Found 4-bit comparator equal for signal <map[27]_map[19]_equal_4936_o> created at line 7973
+    Found 4-bit comparator equal for signal <map[23]_map[31]_equal_13850_o> created at line 8131
+    Found 4-bit comparator equal for signal <map[43]_map[35]_equal_6024_o> created at line 8470
+    Found 4-bit comparator equal for signal <map[39]_map[47]_equal_14938_o> created at line 8754
+    Found 4-bit comparator equal for signal <map[59]_map[51]_equal_7788_o> created at line 9312
+    Found 4-bit comparator equal for signal <map[55]_map[51]_equal_8030_o> created at line 9358
+    Found 4-bit comparator equal for signal <map[59]_map[55]_equal_16218_o> created at line 9436
+    Found 4-bit comparator equal for signal <map[55]_map[63]_equal_16702_o> created at line 9668
+    Found 4-bit comparator greater for signal <GND_11_o_map[51]_LessThan_16940_o> created at line 9782
+    Found 4-bit comparator equal for signal <map[59]_map[63]_equal_16944_o> created at line 10059
+    Found 4-bit comparator greater for signal <GND_11_o_map[55]_LessThan_17685_o> created at line 10142
+    Found 4-bit comparator greater for signal <GND_11_o_map[59]_LessThan_17686_o> created at line 10142
+    Found 4-bit comparator greater for signal <GND_11_o_map[63]_LessThan_17687_o> created at line 10142
+    Found 4-bit comparator greater for signal <GND_11_o_map[3]_LessThan_17770_o> created at line 10187
+    Found 4-bit comparator greater for signal <GND_11_o_map[7]_LessThan_17771_o> created at line 10187
+    Found 4-bit comparator greater for signal <GND_11_o_map[11]_LessThan_17772_o> created at line 10187
+    Found 4-bit comparator greater for signal <GND_11_o_map[15]_LessThan_17773_o> created at line 10187
+    Found 4-bit comparator greater for signal <GND_11_o_map[19]_LessThan_17796_o> created at line 10195
+    Found 4-bit comparator greater for signal <GND_11_o_map[23]_LessThan_17797_o> created at line 10195
+    Found 4-bit comparator greater for signal <GND_11_o_map[27]_LessThan_17798_o> created at line 10195
+    Found 4-bit comparator greater for signal <GND_11_o_map[31]_LessThan_17799_o> created at line 10195
+    Found 4-bit comparator greater for signal <GND_11_o_map[35]_LessThan_17822_o> created at line 10203
+    Found 4-bit comparator greater for signal <GND_11_o_map[39]_LessThan_17823_o> created at line 10203
+    Found 4-bit comparator greater for signal <GND_11_o_map[43]_LessThan_17824_o> created at line 10203
+    Found 4-bit comparator greater for signal <GND_11_o_map[47]_LessThan_17825_o> created at line 10203
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred  71 D-type flip-flop(s).
+	inferred  64 Comparator(s).
+	inferred 5260 Multiplexer(s).
+Unit <move_event> synthesized.
+
+Synthesizing Unit <clkdiv_100ms>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\clkdiv_100ms.v".
+    Found 1-bit register for signal <clk_100ms>.
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_12_o_add_2_OUT> created at line 31.
+    Found 32-bit comparator greater for signal <count[31]_GND_12_o_LessThan_2_o> created at line 29
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <clkdiv_100ms> synthesized.
+
+Synthesizing Unit <keyboard>.
+    Related source file is "C:\Users\Young\Desktop\Verilog Project\Game2048\keyboard.v".
+    Found 8-bit register for signal <ps2d_filter>.
+    Found 1-bit register for signal <PS2Cf>.
+    Found 1-bit register for signal <PS2Df>.
+    Found 11-bit register for signal <shift1>.
+    Found 10-bit register for signal <shift2<10:1>>.
+    Found 8-bit register for signal <ps2c_filter>.
+    Summary:
+	inferred  39 D-type flip-flop(s).
+Unit <keyboard> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 38400x1-bit single-port Read Only RAM                 : 1
+ 53900x1-bit single-port Read Only RAM                 : 1
+# Multipliers                                          : 4
+ 10x7-bit multiplier                                   : 2
+ 32x13-bit multiplier                                  : 1
+ 32x7-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 40
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 11-bit subtractor                                     : 3
+ 13-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 16-bit subtractor                                     : 2
+ 2-bit adder                                           : 3
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 2
+ 4-bit adder                                           : 16
+ 5-bit subtractor                                      : 1
+# Registers                                            : 26
+ 1-bit register                                        : 13
+ 10-bit register                                       : 3
+ 11-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 3
+ 32-bit register                                       : 1
+ 64-bit register                                       : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 92
+ 10-bit comparator greater                             : 17
+ 10-bit comparator lessequal                           : 10
+ 32-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 48
+ 4-bit comparator greater                              : 16
+# Multiplexers                                         : 5275
+ 1-bit 2-to-1 multiplexer                              : 5256
+ 64-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 15
+# Logic shifters                                       : 1
+ 127-bit shifter logical right                         : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <isEnd> has a constant value of 0 in block <U6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <win> has a constant value of 0 in block <U6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <vgaBlue_0> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Top_2048>.
+INFO:Xst:3226 - The RAM <U4/Mram_GND_9_o_X_6_o_Mux_2_o> will be implemented as a BLOCK RAM, absorbing the following register(s): <U4/douta>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 53900-word x 1-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk25>         | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <U4/GND_9_o_GND_9_o_sub_2_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <info_number>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <U5/Mram_GND_10_o_X_7_o_Mux_2_o> will be implemented as a BLOCK RAM, absorbing the following register(s): <U5/douta>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 1-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk25>         | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <U5/GND_10_o_GND_10_o_sub_2_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <info_title>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Top_2048> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clkdiv> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv_100ms>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clkdiv_100ms> synthesized (advanced).
+
+Synthesizing (advanced) Unit <control>.
+	The following adders/subtractors are grouped into adder tree <Madd_n0103_Madd1> :
+ 	<Madd_n0191_Madd> in block <control>, 	<Msub_n0189_Madd> in block <control>, 	<Madd_n0103_Madd> in block <control>.
+Unit <control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_640x480>.
+The following registers are absorbed into counter <hc>: 1 register on signal <hc>.
+The following registers are absorbed into counter <vc>: 1 register on signal <vc>.
+Unit <vga_640x480> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 38400x1-bit single-port block Read Only RAM           : 1
+ 53900x1-bit single-port block Read Only RAM           : 1
+# Multipliers                                          : 4
+ 32x13-bit multiplier                                  : 1
+ 32x7-bit multiplier                                   : 1
+ 4x7-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 34
+ 10-bit subtractor                                     : 2
+ 11-bit subtractor                                     : 3
+ 16-bit adder                                          : 4
+ 16-bit subtractor                                     : 3
+ 3-bit adder carry in                                  : 2
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 17
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+# Comparators                                          : 92
+ 10-bit comparator greater                             : 17
+ 10-bit comparator lessequal                           : 10
+ 32-bit comparator greater                             : 1
+ 4-bit comparator equal                                : 48
+ 4-bit comparator greater                              : 16
+# Multiplexers                                         : 5275
+ 1-bit 2-to-1 multiplexer                              : 5256
+ 64-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 15
+# Logic shifters                                       : 1
+ 127-bit shifter logical right                         : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <isEnd> has a constant value of 0 in block <move_event>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <win> has a constant value of 0 in block <move_event>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <vgaBlue_0> (without init value) has a constant value of 0 in block <vga_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <U3/Mmult_n01201> of sequential type is unconnected in block <Top_2048>.
+WARNING:Xst:2677 - Node <U3/Mmult_n01121> of sequential type is unconnected in block <Top_2048>.
+
+Optimizing unit <Top_2048> ...
+
+Optimizing unit <move_event> ...
+
+Optimizing unit <keyboard> ...
+
+Optimizing unit <vga_640x480> ...
+
+Optimizing unit <vga_display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_2048, actual ratio is 45.
+FlipFlop U1/hc_5 has been replicated 1 time(s)
+FlipFlop U1/hc_6 has been replicated 1 time(s)
+FlipFlop U1/hc_7 has been replicated 1 time(s)
+FlipFlop U1/hc_9 has been replicated 1 time(s)
+FlipFlop U1/vc_0 has been replicated 3 time(s)
+FlipFlop U1/vc_1 has been replicated 3 time(s)
+FlipFlop U1/vc_2 has been replicated 3 time(s)
+FlipFlop U1/vc_3 has been replicated 2 time(s)
+FlipFlop U1/vc_4 has been replicated 3 time(s)
+FlipFlop U1/vc_5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <Top_2048> :
+	Found 4-bit shift register for signal <U8/shift2_8>.
+	Found 3-bit shift register for signal <U8/shift1_8>.
+Unit <Top_2048> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 196
+ Flip-Flops                                            : 196
+# Shift Registers                                      : 2
+ 3-bit shift register                                  : 1
+ 4-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top_2048.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3865
+#      GND                         : 1
+#      INV                         : 30
+#      LUT1                        : 58
+#      LUT2                        : 53
+#      LUT3                        : 219
+#      LUT4                        : 551
+#      LUT5                        : 683
+#      LUT6                        : 1976
+#      MUXCY                       : 123
+#      MUXF7                       : 45
+#      VCC                         : 1
+#      XORCY                       : 125
+# FlipFlops/Latches                : 198
+#      FD                          : 23
+#      FD_1                        : 14
+#      FDE                         : 66
+#      FDR                         : 70
+#      FDRE                        : 25
+# RAMS                             : 7
+#      RAMB16BWER                  : 5
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 7
+#      OBUF                        : 11
+# DSPs                             : 2
+#      DSP48A1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             198  out of  18224     1%  
+ Number of Slice LUTs:                 3572  out of   9112    39%  
+    Number used as Logic:              3570  out of   9112    39%  
+    Number used as Memory:                2  out of   2176     0%  
+       Number used as SRL:                2
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3638
+   Number with an unused Flip Flop:    3440  out of   3638    94%  
+   Number with an unused LUT:            66  out of   3638     1%  
+   Number of fully used LUT-FF pairs:   132  out of   3638     3%  
+   Number of unique control sets:        18
+
+IO Utilization: 
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    232     8%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                6  out of     32    18%  
+    Number using Block RAM only:          6
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                      2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 35    |
+U7/clk_100ms                       | BUFG                   | 69    |
+U8/PS2Cf                           | BUFG                   | 18    |
+U0/count_1                         | BUFG                   | 85    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 17.881ns (Maximum Frequency: 55.925MHz)
+   Minimum input arrival time before clock: 4.083ns
+   Maximum output required time after clock: 6.501ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.671ns (frequency: 214.064MHz)
+  Total number of paths / destination ports: 2049 / 67
+-------------------------------------------------------------------------
+Delay:               4.671ns (Levels of Logic = 8)
+  Source:            U7/count_9 (FF)
+  Destination:       U7/clk_100ms (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: U7/count_9 to U7/clk_100ms
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.995  U7/count_9 (U7/count_9)
+     LUT5:I0->O            1   0.203   0.000  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_lut<0> (U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<0> (U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<1> (U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<2> (U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<3> (U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<4> (U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<4>)
+     MUXCY:CI->O          33   0.258   1.305  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<5> (U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<5>)
+     INV:I->O              1   0.206   0.579  U7/Mcompar_count[31]_GND_12_o_LessThan_2_o_cy<5>_inv1_INV_0 (U7/count[31]_GND_12_o_LessThan_2_o)
+     FDR:R                     0.430          U7/clk_100ms
+    ----------------------------------------
+    Total                      4.671ns (1.792ns logic, 2.879ns route)
+                                       (38.4% logic, 61.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U7/clk_100ms'
+  Clock period: 14.244ns (frequency: 70.205MHz)
+  Total number of paths / destination ports: 156806 / 128
+-------------------------------------------------------------------------
+Delay:               14.244ns (Levels of Logic = 11)
+  Source:            U6/map_30 (FF)
+  Destination:       U6/map_25 (FF)
+  Source Clock:      U7/clk_100ms rising
+  Destination Clock: U7/clk_100ms rising
+
+  Data Path: U6/map_30 to U6/map_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             64   0.447   1.868  U6/map_30 (U6/map_30)
+     LUT4:I1->O           86   0.205   2.032  U6/GND_11_o_map[31]_LessThan_17799_o1 (U6/GND_11_o_map[31]_LessThan_17799_o)
+     LUT4:I0->O           31   0.203   1.622  U6/GND_11_o_GND_11_o_AND_13309_o1 (U6/GND_11_o_GND_11_o_AND_13309_o)
+     LUT5:I0->O            3   0.203   0.755  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT32811 (U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3281)
+     LUT6:I4->O            1   0.203   0.827  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3501 (U6/Mmux_map[63]_GND_11_o_mux_17855_OUT350)
+     LUT5:I1->O            1   0.203   0.684  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3505_SW0 (N328)
+     LUT6:I4->O            1   0.203   0.684  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3505 (U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3504)
+     LUT6:I4->O            1   0.203   0.808  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3506 (U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3505)
+     LUT4:I1->O            1   0.205   0.684  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3508 (U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3507)
+     LUT6:I4->O            1   0.203   0.684  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3509 (U6/Mmux_map[63]_GND_11_o_mux_17855_OUT3508)
+     LUT6:I4->O            1   0.203   0.808  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT35020 (U6/Mmux_map[63]_GND_11_o_mux_17855_OUT35020)
+     LUT4:I1->O            1   0.205   0.000  U6/Mmux_map[63]_GND_11_o_mux_17855_OUT35033 (U6/map[63]_GND_11_o_mux_17855_OUT<25>)
+     FDE:D                     0.102          U6/map_25
+    ----------------------------------------
+    Total                     14.244ns (2.788ns logic, 11.456ns route)
+                                       (19.6% logic, 80.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U8/PS2Cf'
+  Clock period: 1.415ns (frequency: 706.714MHz)
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Delay:               1.415ns (Levels of Logic = 0)
+  Source:            U8/Mshreg_shift2_8 (FF)
+  Destination:       U8/shift2_8 (FF)
+  Source Clock:      U8/PS2Cf falling
+  Destination Clock: U8/PS2Cf falling
+
+  Data Path: U8/Mshreg_shift2_8 to U8/shift2_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q        1   1.313   0.000  U8/Mshreg_shift2_8 (U8/Mshreg_shift2_8)
+     FDE:D                     0.102          U8/shift2_8
+    ----------------------------------------
+    Total                      1.415ns (1.415ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U0/count_1'
+  Clock period: 17.881ns (frequency: 55.925MHz)
+  Total number of paths / destination ports: 1639313711 / 254
+-------------------------------------------------------------------------
+Delay:               17.881ns (Levels of Logic = 25)
+  Source:            U1/vc_2_1 (FF)
+  Destination:       U4/Mram_GND_9_o_X_6_o_Mux_2_o4 (RAM)
+  Source Clock:      U0/count_1 rising
+  Destination Clock: U0/count_1 rising
+
+  Data Path: U1/vc_2_1 to U4/Mram_GND_9_o_X_6_o_Mux_2_o4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.684  U1/vc_2_1 (U1/vc_2_1)
+     LUT2:I0->O            3   0.203   0.651  U3/GND_5_o_ypix[9]_LessThan_9_o11121 (U3/GND_5_o_ypix[9]_LessThan_9_o1112)
+     LUT6:I5->O           17   0.205   1.132  U3/Msub_ypix_xor<6>11 (U3/ypix<6>)
+     LUT5:I3->O            1   0.203   0.580  U3/Madd_n0187[2:0]_Madd_xor<0>11_SW1 (N189)
+     LUT6:I5->O           19   0.205   1.072  U3/Madd_n0187[2:0]_Madd_xor<0>11 (U3/n0187[2:0]<0>)
+     LUT6:I5->O            1   0.205   0.827  Sh3162 (Sh3162)
+     LUT6:I2->O           12   0.203   1.137  Sh3165 (Sh316)
+     LUT4:I1->O           13   0.205   0.932  U3/Msub_GND_5_o_GND_5_o_sub_16_OUT_xor<3>121 (U3/Msub_GND_5_o_GND_5_o_sub_16_OUT_xor<3>12)
+     DSP48A1:B4->M1        2   3.364   0.845  U3/Mmult_n0112 (U3/n0112<1>)
+     LUT3:I0->O            1   0.205   0.580  ADDER_FOR_MULTADD_Madd11 (ADDER_FOR_MULTADD_Madd11)
+     LUT4:I3->O            1   0.205   0.000  ADDER_FOR_MULTADD_Madd1_lut<0>2 (ADDER_FOR_MULTADD_Madd1_lut<0>2)
+     MUXCY:S->O            1   0.172   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_1 (ADDER_FOR_MULTADD_Madd1_cy<0>2)
+     MUXCY:CI->O           1   0.019   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_2 (ADDER_FOR_MULTADD_Madd1_cy<0>3)
+     MUXCY:CI->O           1   0.019   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_3 (ADDER_FOR_MULTADD_Madd1_cy<0>4)
+     MUXCY:CI->O           1   0.019   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_4 (ADDER_FOR_MULTADD_Madd1_cy<0>5)
+     MUXCY:CI->O           1   0.019   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_5 (ADDER_FOR_MULTADD_Madd1_cy<0>6)
+     MUXCY:CI->O           1   0.019   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_6 (ADDER_FOR_MULTADD_Madd1_cy<0>7)
+     MUXCY:CI->O           1   0.019   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_7 (ADDER_FOR_MULTADD_Madd1_cy<0>8)
+     MUXCY:CI->O           1   0.019   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_8 (ADDER_FOR_MULTADD_Madd1_cy<0>9)
+     XORCY:CI->O           1   0.180   0.580  ADDER_FOR_MULTADD_Madd1_xor<0>_9 (ADDER_FOR_MULTADD_Madd_101)
+     LUT2:I1->O            1   0.205   0.000  ADDER_FOR_MULTADD_Madd2_lut<10> (ADDER_FOR_MULTADD_Madd2_lut<10>)
+     MUXCY:S->O            1   0.172   0.000  ADDER_FOR_MULTADD_Madd2_cy<10> (ADDER_FOR_MULTADD_Madd2_cy<10>)
+     XORCY:CI->O           1   0.180   0.579  ADDER_FOR_MULTADD_Madd2_xor<11> (ADDER_FOR_MULTADD_Madd_112)
+     INV:I->O              1   0.206   0.000  U4/Msub_GND_9_o_GND_9_o_sub_2_OUT<15:0>_lut<11>_INV_0 (U4/Msub_GND_9_o_GND_9_o_sub_2_OUT<15:0>_lut<11>)
+     MUXCY:S->O            1   0.172   0.000  U4/Msub_GND_9_o_GND_9_o_sub_2_OUT<15:0>_cy<11> (U4/Msub_GND_9_o_GND_9_o_sub_2_OUT<15:0>_cy<11>)
+     XORCY:CI->O           4   0.180   0.683  U4/Msub_GND_9_o_GND_9_o_sub_2_OUT<15:0>_xor<12> (U4/GND_9_o_GND_9_o_sub_2_OUT<12>)
+     RAMB16BWER:ADDRA12        0.350          U4/Mram_GND_9_o_X_6_o_Mux_2_o1
+    ----------------------------------------
+    Total                     17.881ns (7.600ns logic, 10.281ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U7/clk_100ms'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.083ns (Levels of Logic = 3)
+  Source:            btn<1> (PAD)
+  Destination:       U6/up (FF)
+  Destination Clock: U7/clk_100ms rising
+
+  Data Path: btn<1> to U6/up
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  btn_1_IBUF (btn_1_IBUF)
+     LUT2:I1->O            1   0.205   0.827  U6/xkey[15]_GND_11_o_AND_2164_o_SW0 (N48)
+     LUT6:I2->O            1   0.203   0.579  U6/xkey[15]_GND_11_o_AND_2164_o (U6/xkey[15]_GND_11_o_AND_2164_o)
+     FDR:R                     0.430          U6/up
+    ----------------------------------------
+    Total                      4.083ns (2.060ns logic, 2.023ns route)
+                                       (50.5% logic, 49.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U0/count_1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            PS2KeyboardClk (PAD)
+  Destination:       U8/ps2c_filter_7 (FF)
+  Destination Clock: U0/count_1 rising
+
+  Data Path: PS2KeyboardClk to U8/ps2c_filter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  PS2KeyboardClk_IBUF (PS2KeyboardClk_IBUF)
+     FD:D                      0.102          U8/ps2c_filter_7
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U0/count_1'
+  Total number of paths / destination ports: 22 / 10
+-------------------------------------------------------------------------
+Offset:              6.501ns (Levels of Logic = 3)
+  Source:            U1/vc_5 (FF)
+  Destination:       Vsync (PAD)
+  Source Clock:      U0/count_1 rising
+
+  Data Path: U1/vc_5 to Vsync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            25   0.447   1.537  U1/vc_5 (U1/vc_5)
+     LUT5:I0->O            2   0.203   0.961  U1/SF114511 (U1/SF11451)
+     LUT5:I0->O            1   0.203   0.579  U1/Vsync11 (Vsync_OBUF)
+     OBUF:I->O                 2.571          Vsync_OBUF (Vsync)
+    ----------------------------------------
+    Total                      6.501ns (3.424ns logic, 3.077ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock U0/count_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U0/count_1     |   17.881|         |         |         |
+U7/clk_100ms   |   14.919|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U7/clk_100ms
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U7/clk_100ms   |   14.244|         |         |         |
+U8/PS2Cf       |         |    5.838|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U8/PS2Cf
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U0/count_1     |         |         |    1.063|         |
+U8/PS2Cf       |         |         |    1.415|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.671|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 114.00 secs
+Total CPU time to Xst completion: 113.87 secs
+ 
+--> 
+
+Total memory usage is 280908 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  307 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
